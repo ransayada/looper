@@ -33,53 +33,62 @@ const App = () => {
   const audioRef8 = useRef();
   const audioRef9 = useRef();
 
-  const tracks = [
+  const [tracks, setTracks] = useState([
     {
       id: 1,
       name: "_tambourine_shake_higher",
       color: "#f87171",
+      isMute: false,
     },
     {
       id: 2,
       name: "ALL TRACK",
       color: "#fb923c",
+      isMute: false,
     },
     {
       id: 3,
       name: "B VOC",
       color: "#a3e635",
+      isMute: false,
     },
     {
       id: 4,
       name: "DRUMS",
       color: "#34d399",
+      isMute: false,
     },
     {
       id: 5,
       name: "HE HE VOC",
       color: "#2dd4bf",
+      isMute: false,
     },
     {
       id: 6,
       name: "HIGH VOC",
       color: "#22d3ee",
+      isMute: false,
     },
     {
       id: 7,
       name: "JIBRISH",
       color: "#60a5fa",
+      isMute: false,
     },
     {
       id: 8,
       name: "LEAD 1",
       color: "#818cf8",
+      isMute: false,
     },
     {
       id: 9,
       name: "UUHO VOC",
       color: "#fb7185",
+      isMute: false,
     },
-  ];
+  ]);
 
   //audio slider-time handler
   const onChange = (e) => {

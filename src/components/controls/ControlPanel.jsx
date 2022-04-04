@@ -36,7 +36,7 @@ const ControlPanel = ({duration, currentTime }) => {
     <div className='control-panel'>
       <div className='timer'><h3>{secondsToHms(currentTime)}</h3>
       </div>
-        <div className='spaces'>``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````</div>
+        <div className='spaces'>````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````</div>
       <div className='timer'><h3>{secondsToHms(duration)}</h3></div>
     </div>
   </>
