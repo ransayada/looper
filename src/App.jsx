@@ -129,22 +129,6 @@ const App = () => {
     const audio9Cur = (audio9.duration / 100) * e.target.value;
     if(!isFinite(audio9Cur)) audio9.currentTime = audio9Cur;
     audio9.currentTime = audio9Cur;
-    // const audio2 = audioRef2.current;
-    // audio2.currentTime = (audio2.duration / 100) * e.target.value;
-    // const audio3 = audioRef3.current;
-    // audio3.currentTime = (audio3.duration / 100) * e.target.value;
-    // const audio4 = audioRef4.current;
-    // audio4.currentTime = (audio4.duration / 100) * e.target.value;
-    // const audio5 = audioRef5.current;
-    // audio5.currentTime = (audio5.duration / 100) * e.target.value;
-    // const audio6 = audioRef6.current;
-    // audio6.currentTime = (audio6.duration / 100) * e.target.value;
-    // const audio7 = audioRef7.current;
-    // audio7.currentTime = (audio7.duration / 100) * e.target.value;
-    // const audio8 = audioRef8.current;
-    // audio8.currentTime = (audio8.duration / 100) * e.target.value;
-    // const audio9 = audioRef9.current;
-    // audio9.currentTime = (audio9.duration / 100) * e.target.value;
     setPercentage(e.target.value);
   };
 
