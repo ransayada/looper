@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 //Tracks
-import Track1 from "./assets/audio/_tambourine_shake_higher.mp3";
+import Track1 from "./assets/audio/tambourine_shake_higher.mp3";
 import Track2 from "./assets/audio/ALL TRACK.mp3";
 import Track3 from "./assets/audio/B VOC.mp3";
 import Track4 from "./assets/audio/DRUMS.mp3";
@@ -36,7 +36,7 @@ const App = () => {
   const [tracks, setTracks] = useState([
     {
       id: 1,
-      name: "_tambourine_shake_higher",
+      name: "tambourine_shake_higher",
       color: "#f87171",
       isMute: false,
     },
