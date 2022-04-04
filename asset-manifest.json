@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/looper/static/css/main.c2f96a79.css",
-    "main.js": "/looper/static/js/main.7c4a415a.js",
+    "main.css": "/looper/static/css/main.3227d486.css",
+    "main.js": "/looper/static/js/main.5ae11a3f.js",
     "static/media/ALL TRACK.mp3": "/looper/static/media/ALL TRACK.0fa4445ea8455a4babf4.mp3",
     "static/media/B VOC.mp3": "/looper/static/media/B VOC.5ffa9906c5972f1fb03c.mp3",
     "static/media/DRUMS.mp3": "/looper/static/media/DRUMS.f0332952662d2e1f5d15.mp3",
@@ -12,11 +12,11 @@
     "static/media/UUHO VOC.mp3": "/looper/static/media/UUHO VOC.bc87006a5f29b4cfa918.mp3",
     "static/media/_tambourine_shake_higher.mp3": "/looper/static/media/_tambourine_shake_higher.2ceb47bfdbea6e81aae9.mp3",
     "index.html": "/looper/index.html",
-    "main.c2f96a79.css.map": "/looper/static/css/main.c2f96a79.css.map",
-    "main.7c4a415a.js.map": "/looper/static/js/main.7c4a415a.js.map"
+    "main.3227d486.css.map": "/looper/static/css/main.3227d486.css.map",
+    "main.5ae11a3f.js.map": "/looper/static/js/main.5ae11a3f.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2f96a79.css",
-    "static/js/main.7c4a415a.js"
+    "static/css/main.3227d486.css",
+    "static/js/main.5ae11a3f.js"
   ]
 }
