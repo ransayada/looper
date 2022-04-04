@@ -91,6 +91,7 @@ const App = () => {
   ]);
 
   //audio slider-time handler
+  //this is not look good at all, but chrome doesn't like the audio tag timeupdate event (it think the currentTime is not finite)
   const onChange = (e) => {
     const audio1 = audioRef1.current;
     const audio1Cur = (audio1.duration / 100) * e.target.value;
@@ -144,7 +145,7 @@ const App = () => {
     // audio8.currentTime = (audio8.duration / 100) * e.target.value;
     // const audio9 = audioRef9.current;
     // audio9.currentTime = (audio9.duration / 100) * e.target.value;
-    // setPercentage(e.target.value);
+    setPercentage(e.target.value);
   };
 
   const play = () => {
