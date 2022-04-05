@@ -6,6 +6,7 @@ import UnMuteIcon from './UnMuteIcon';
 
 const Channel = (props) => {
   const [isMute, setIsMute] = useState(false);
+  const {color, id,name} = props.track;
 
   const toggleIsMuted = () => {
     if (isMute) {
@@ -17,9 +18,9 @@ const Channel = (props) => {
     }
   };
   return (
-    <div className="channel" style={{ backgroundColor: props.track.color }}>
-      <h5 className="channel-name">Chanel {props.track.id}</h5>
-      <h5 className="channel-name">{props.track.name}</h5>
+    <div className="channel" style={{ backgroundColor: color }}>
+      <h5 className="channel-name">Chanel {id}</h5>
+      <h5 className="channel-name">{name}</h5>
 
       <div className="vol-mute">
         {isMute ? (

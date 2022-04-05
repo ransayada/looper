@@ -1,8 +1,8 @@
 import React from "react";
-import "./control-panel.css";
+import "./time-panel.css";
 
-const ControlPanel = ({ duration, currentTime }) => {
-  const secondsToHms = (seconds) => {
+const TimePanel = ({ duration, currentTime }) => {
+  const secondsToMs = (seconds) => {
     if (!seconds) return "00m 00s";
 
     let duration = seconds;
@@ -21,6 +21,7 @@ const ControlPanel = ({ duration, currentTime }) => {
       min = `0${min}`;
     }
 
+    //in case there will be more than 1 hour
     if (parseInt(hours, 10) > 0) {
       return `${parseInt(hours, 10)}h ${min}m ${sec}s`;
     } else if (min === 0) {
@@ -34,13 +35,13 @@ const ControlPanel = ({ duration, currentTime }) => {
     <>
       <div className="control-panel">
         <div className="timer">
-          <h3>{secondsToHms(currentTime)}</h3>
+          <h3>{secondsToMs(currentTime)}</h3>
         </div>
         <div className="timer">
-          <h3>{secondsToHms(duration)}</h3>
+          <h3>{secondsToMs(duration)}</h3>
         </div>
       </div>
     </>
   );
 };
-export default ControlPanel;
+export default TimePanel;
