@@ -23,7 +23,7 @@ const App = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLooping, setIsLooping] = useState(false);
 
-  //audio refs
+  //audio refs for play() pause() loop and mute
   const audioRef1 = useRef();
   const audioRef2 = useRef();
   const audioRef3 = useRef();
@@ -177,7 +177,6 @@ const App = () => {
           key={track.id}
         ></audio>
       ))}
-
       {tracks.map((track) => (
         <Channel track={track} key={track.id} />
       ))}

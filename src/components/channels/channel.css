@@ -3,7 +3,7 @@
     border-radius: 10px;
     margin: 0.5em;
     padding: 1em;
-    height: 2.5em;
+    height:7vh;
     width: 100%;
     display:flex;
     justify-content: space-between;
@@ -12,14 +12,11 @@
   }
   .channel-volume-mute{
     border-radius: 15px;
-    height: 2em;
     width: 2.5rem;
     background-color: #ccc;
-    
-    
   }
-  .channel-volume-mute:hover{
-    color: #fff; 
-     background-color: #ccc;
+  
+  button{
+    cursor: pointer;
   }
   
