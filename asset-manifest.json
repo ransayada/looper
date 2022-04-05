@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/looper/static/css/main.8fe504e9.css",
-    "main.js": "/looper/static/js/main.cef14a02.js",
+    "main.css": "/looper/static/css/main.219b2193.css",
+    "main.js": "/looper/static/js/main.85982906.js",
     "static/media/ALL TRACK.mp3": "/looper/static/media/ALL TRACK.0fa4445ea8455a4babf4.mp3",
     "static/media/B VOC.mp3": "/looper/static/media/B VOC.5ffa9906c5972f1fb03c.mp3",
     "static/media/DRUMS.mp3": "/looper/static/media/DRUMS.f0332952662d2e1f5d15.mp3",
@@ -12,11 +12,11 @@
     "static/media/UUHO VOC.mp3": "/looper/static/media/UUHO VOC.bc87006a5f29b4cfa918.mp3",
     "static/media/tambourine_shake_higher.mp3": "/looper/static/media/tambourine_shake_higher.2ceb47bfdbea6e81aae9.mp3",
     "index.html": "/looper/index.html",
-    "main.8fe504e9.css.map": "/looper/static/css/main.8fe504e9.css.map",
-    "main.cef14a02.js.map": "/looper/static/js/main.cef14a02.js.map"
+    "main.219b2193.css.map": "/looper/static/css/main.219b2193.css.map",
+    "main.85982906.js.map": "/looper/static/js/main.85982906.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fe504e9.css",
-    "static/js/main.cef14a02.js"
+    "static/css/main.219b2193.css",
+    "static/js/main.85982906.js"
   ]
 }
