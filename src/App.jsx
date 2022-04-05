@@ -4,15 +4,15 @@ import { useState, useRef } from "react";
 import Track1 from "./assets/audio/ALL TRACK.mp3";
 import Track2 from "./assets/audio/tambourine_shake_higher.mp3";
 import Track3 from "./assets/audio/B VOC.mp3";
-import Track4 from "./assets/audio/DRUMS.mp3";
-import Track5 from "./assets/audio/HE HE VOC.mp3";
-import Track6 from "./assets/audio/HIGH VOC.mp3";
-import Track7 from "./assets/audio/JIBRISH.mp3";
-import Track8 from "./assets/audio/LEAD 1.mp3";
-import Track9 from "./assets/audio/UUHO VOC.mp3";
+import Track4 from "./assets/audio/UUHO VOC.mp3";
+import Track5 from "./assets/audio/DRUMS.mp3";
+import Track6 from "./assets/audio/HE HE VOC.mp3";
+import Track7 from "./assets/audio/HIGH VOC.mp3";
+import Track8 from "./assets/audio/JIBRISH.mp3";
+import Track9 from "./assets/audio/LEAD 1.mp3";
 //Components
 import Slider from "./components/slider/Slider";
-import TimePanel from "./components/controls/TimePanel";
+import TimePanel from "./components/time-panel/TimePanel";
 import Channel from "./components/channels/Channel";
 import MyButton from "./components/special-button/MyButton";
 
@@ -34,6 +34,7 @@ const App = () => {
   const audioRef8 = useRef();
   const audioRef9 = useRef();
 
+  //audio tracks State
   const [tracks, setTracks] = useState([
     {
       id: 1,
@@ -54,55 +55,55 @@ const App = () => {
     {
       id: 3,
       name: "B VOC",
-      color: "#fb7185",
+      color: "#f472b6",
       isMute: false,
       audioRef: audioRef3,
       src: Track3,
     },
     {
       id: 4,
-      name: "DRUMS",
-      color: "#34d399",
+      name: "UUHO VOC",
+      color: "#e879f9",
       isMute: false,
       audioRef: audioRef4,
       src: Track4,
     },
     {
       id: 5,
-      name: "HE HE VOC",
-      color: "#2dd4bf",
+      name: "DRUMS",
+      color: "#34d399",
       isMute: false,
       audioRef: audioRef5,
       src: Track5,
     },
     {
       id: 6,
-      name: "HIGH VOC",
-      color: "#22d3ee",
+      name: "HE HE VOC",
+      color: "#2dd4bf",
       isMute: false,
       audioRef: audioRef6,
       src: Track6,
     },
     {
       id: 7,
-      name: "JIBRISH",
-      color: "#60a5fa",
+      name: "HIGH VOC",
+      color: "#22d3ee",
       isMute: false,
       audioRef: audioRef7,
       src: Track7,
     },
     {
       id: 8,
-      name: "LEAD 1",
-      color: "#818cf8",
+      name: "JIBRISH",
+      color: "#60a5fa",
       isMute: false,
       audioRef: audioRef8,
       src: Track8,
     },
     {
       id: 9,
-      name: "UUHO VOC",
-      color:"#e879f9",
+      name: "LEAD 1",
+      color: "#818cf8",
       isMute: false,
       audioRef: audioRef9,
       src: Track9,
@@ -114,7 +115,9 @@ const App = () => {
     for (let i = 0; i < tracks.length; i++) {
       const audio = tracks[i].audioRef.current;
       const audioCurr = (audio.duration / 100) * e.target.value;
-      if(!isFinite(audioCurr)){audio.currentTime = audioCurr;}
+      if (!isFinite(audioCurr)) {
+        audio.currentTime = audioCurr;
+      }
       audio.currentTime = audioCurr;
     }
     setPercentage(e.target.value);
@@ -124,8 +127,7 @@ const App = () => {
   const play = () => {
     for (let i = 0; i < tracks.length; i++) {
       const audio = tracks[i].audioRef.current;
-      if(!isPlaying) {
-        !tracks[i].isMute ? (audio.volume = 0.3) : (audio.volume = 0);
+      if (!isPlaying) {
         audio.play();
       } else {
         audio.pause();
@@ -134,14 +136,14 @@ const App = () => {
     setIsPlaying(!isPlaying);
   };
 
-  //Loop toggle function
+  //Loop button toggle function
   const loop = () => {
     setIsLooping(!isLooping);
   };
 
-  //Stop toggle function
+  //Stop button toggle function
   const stop = () => {
-    for(let i = 0; i < tracks.length; i++) {
+    for (let i = 0; i < tracks.length; i++) {
       const audio = tracks[i].audioRef.current;
       audio.pause();
       audio.currentTime = 0;
@@ -149,6 +151,7 @@ const App = () => {
     setIsPlaying(false);
   };
 
+  //audio time update function
   const getCurrDuration = (e) => {
     const percent = (
       (e.currentTarget.currentTime / e.currentTarget.duration) *
@@ -167,30 +170,29 @@ const App = () => {
         Looper<span className="dot">.</span>
       </h1>
       <Slider percentage={percentage} onChange={onChange} />
-      <TimePanel
-        duration={duration}
-        currentTime={currentTime}
-      />
+      <TimePanel duration={duration} currentTime={currentTime} />
       {tracks.map((track) => (
         <audio
-        muted={track.isMute}
-        loop={isLooping}
-        ref={track.audioRef}
-        onTimeUpdate={getCurrDuration}
-        onLoadedData={(e) => {
-          setDuration(e.currentTarget.duration.toFixed(2));
-        }}
-        src={track.src}
-        key={track.id}
+          muted={track.isMute}
+          loop={isLooping}
+          ref={track.audioRef}
+          onTimeUpdate={getCurrDuration}
+          onLoadedData={(e) => {
+            setDuration(e.currentTarget.duration.toFixed(2));
+          }}
+          src={track.src}
+          key={track.id}
         ></audio>
       ))}
-      
+
       {tracks.map((track) => (
         <Channel track={track} key={track.id} />
       ))}
       <div className="buttons">
         <MyButton play={play} isPlaying={isPlaying} />
-        <button className="stop-btn" onClick={stop}>stop</button>
+        <button className="stop-btn" onClick={stop}>
+          stop
+        </button>
         <button
           onClick={loop}
           className={isLooping ? "btn-loop" : "btn-no-loop"}

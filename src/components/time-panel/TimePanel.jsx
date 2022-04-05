@@ -1,7 +1,7 @@
-import React from "react";
 import "./time-panel.css";
 
 const TimePanel = ({ duration, currentTime }) => {
+  //turn number of seconds into 00h:00m:00s format if less than hour 00m:00s format
   const secondsToMs = (seconds) => {
     if (!seconds) return "00m 00s";
 
@@ -33,7 +33,7 @@ const TimePanel = ({ duration, currentTime }) => {
 
   return (
     <>
-      <div className="control-panel">
+      <div className="time-panel">
         <div className="timer">
           <h3>{secondsToMs(currentTime)}</h3>
         </div>

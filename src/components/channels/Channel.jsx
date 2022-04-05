@@ -1,7 +1,7 @@
 import "./channel.css";
 import React, { useState } from "react";
-import MuteIcon from './MuteIcon';
-import UnMuteIcon from './UnMuteIcon';
+import MuteIcon from './icons/MuteIcon';
+import UnMuteIcon from './icons/UnMuteIcon';
   
 
 const Channel = (props) => {

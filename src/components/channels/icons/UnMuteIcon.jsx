@@ -1,5 +1,5 @@
 import React from 'react';
-import './unmuteicon.css';
+import './un-mute-icon.css';
 
 const UnMuteIcon = () => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react'
 import './my-button.css';
 
 const MyButton = ({ play, isPlaying }) => {
