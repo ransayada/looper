@@ -115,9 +115,7 @@ const App = () => {
     for (let i = 0; i < tracks.length; i++) {
       const audio = tracks[i].audioRef.current;
       const audioCurr = (audio.duration / 100) * e.target.value;
-      if (!isFinite(audioCurr)) {
-        audio.currentTime = audioCurr;
-      }
+      if (!isFinite(audioCurr)) audio.currentTime = audioCurr; //finite check
       audio.currentTime = audioCurr;
     }
     setPercentage(e.target.value);
@@ -127,11 +125,7 @@ const App = () => {
   const play = () => {
     for (let i = 0; i < tracks.length; i++) {
       const audio = tracks[i].audioRef.current;
-      if (!isPlaying) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
+      !isPlaying ? audio.play() : audio.pause();
     }
     setIsPlaying(!isPlaying);
   };
@@ -158,7 +152,6 @@ const App = () => {
       100
     ).toFixed(2);
     const time = e.currentTarget.currentTime;
-
     setPercentage(+percent);
     setCurrentTime(time.toFixed(2));
   };

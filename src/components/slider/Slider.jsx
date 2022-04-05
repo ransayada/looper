@@ -5,7 +5,6 @@ const Slider = ({ percentage = 0, onChange }) => {
   const [position, setPosition] = useState(0);
   const [marginLeft, setMarginLeft] = useState(0);
   const [progressBarWidth, setProgressBarWidth] = useState(0);
-
   const rangeRef = useRef();
   const thumbRef = useRef();
 
@@ -13,10 +12,13 @@ const Slider = ({ percentage = 0, onChange }) => {
     const rangeWidth = rangeRef.current.getBoundingClientRect().width; // get the width of the input range tag
     const thumbWidth = thumbRef.current.getBoundingClientRect().width; // will be always 15px (the width of the thumb) but it's better to get it from the DOM
     const centerThumb = (thumbWidth / 100) * percentage * -1;
-    const centerProgressBar = thumbWidth + (rangeWidth / 100) * percentage - (thumbWidth / 100) * percentage;
-    setPosition(percentage); // set the position of the thumb 
+    const centerProgressBar =
+      thumbWidth +
+      (rangeWidth / 100) * percentage -
+      (thumbWidth / 100) * percentage;
+    setPosition(percentage); // set the position of the thumb
     setMarginLeft(centerThumb); //the thumb go right using margin-left css property
-    setProgressBarWidth(centerProgressBar);// set the position of the marked range
+    setProgressBarWidth(centerProgressBar); // set the position of the marked range
   }, [percentage]);
 
   return (
