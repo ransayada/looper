@@ -1,5 +1,8 @@
 import "./channel.css";
 import React, { useState } from "react";
+import MuteIcon from './MuteIcon';
+import UnMuteIcon from './UnMuteIcon';
+  
 
 const Channel = (props) => {
   const [isMute, setIsMute] = useState(false);
@@ -23,15 +26,15 @@ const Channel = (props) => {
           <button
             className="channel-volume-mute"
             onClick={() => toggleIsMuted()}
-          >
-            UnMute
+            >
+            <MuteIcon />
           </button>
         ) : (
           <button
-            className="channel-volume-mute"
-            onClick={() => toggleIsMuted()}
+          className="channel-volume-mute"
+          onClick={() => toggleIsMuted()}
           >
-            Mute
+          <UnMuteIcon />
           </button>
         )}
       </div>

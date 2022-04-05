@@ -238,6 +238,7 @@ const App = () => {
         currentTime={currentTime}
       />
       <audio
+      muted={tracks[0].isMute}
         loop={isLooping}
         ref={audioRef1}
         onTimeUpdate={getCurrDuration}
@@ -247,6 +248,7 @@ const App = () => {
         src={Track1}
       ></audio>
       <audio
+      muted={tracks[1].isMute}
         loop={isLooping}
         ref={audioRef2}
         onTimeUpdate={getCurrDuration}
@@ -256,6 +258,7 @@ const App = () => {
         src={Track2}
       ></audio>
       <audio
+      muted={tracks[2].isMute}
         loop={isLooping}
         ref={audioRef3}
         onTimeUpdate={getCurrDuration}
@@ -265,6 +268,7 @@ const App = () => {
         src={Track3}
       ></audio>
       <audio
+      muted={tracks[3].isMute}
         loop={isLooping}
         ref={audioRef4}
         onTimeUpdate={getCurrDuration}
@@ -274,6 +278,7 @@ const App = () => {
         src={Track4}
       ></audio>
       <audio
+      muted={tracks[4].isMute}
         loop={isLooping}
         ref={audioRef5}
         onTimeUpdate={getCurrDuration}
@@ -283,6 +288,7 @@ const App = () => {
         src={Track5}
       ></audio>
       <audio
+      muted={tracks[5].isMute}
         loop={isLooping}
         ref={audioRef6}
         onTimeUpdate={getCurrDuration}
@@ -292,6 +298,7 @@ const App = () => {
         src={Track6}
       ></audio>
       <audio
+      muted={tracks[6].isMute}
         loop={isLooping}
         ref={audioRef7}
         onTimeUpdate={getCurrDuration}
@@ -301,6 +308,7 @@ const App = () => {
         src={Track7}
       ></audio>
       <audio
+      muted={tracks[7].isMute}
         loop={isLooping}
         ref={audioRef8}
         onTimeUpdate={getCurrDuration}
@@ -310,6 +318,7 @@ const App = () => {
         src={Track8}
       ></audio>
       <audio
+      muted={tracks[8].isMute}
         loop={isLooping}
         ref={audioRef9}
         onTimeUpdate={getCurrDuration}

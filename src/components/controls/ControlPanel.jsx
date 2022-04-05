@@ -2,7 +2,7 @@ import React from "react";
 import "./control-panel.css";
 
 const ControlPanel = ({ duration, currentTime }) => {
-  function secondsToHms(seconds) {
+  const secondsToHms = (seconds) => {
     if (!seconds) return "00m 00s";
 
     let duration = seconds;
@@ -35,9 +35,6 @@ const ControlPanel = ({ duration, currentTime }) => {
       <div className="control-panel">
         <div className="timer">
           <h3>{secondsToHms(currentTime)}</h3>
-        </div>
-        <div className="spaces">
-          ````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
         </div>
         <div className="timer">
           <h3>{secondsToHms(duration)}</h3>

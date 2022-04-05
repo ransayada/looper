@@ -5,11 +5,4 @@ import App from "./App";
 
 //because of warning regarding the use of React v18.0.0
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById("root")
-// );
+root.render( < App / > );
